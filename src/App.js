@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Contacts from './components/contacts/Contacts'
-import AboutUs from './components/pages/about';
+import AboutUs from './components/pages/About';
+import PageNotFound from './components/pages/PageNotFound';
 import Header from './components/layout/Header';
 import AddContact from './components/contacts/AddContact';
 
@@ -17,8 +18,9 @@ const App = () => {
           <div className="container">
             <Switch>
               <Route exact path='/' component={Contacts} />
-              <Route path='/addContacts' component={AddContact} />
+              <Route path='/contact/add' component={AddContact} />
               <Route path='/about' component={AboutUs} />
+              <Route component={PageNotFound} />
             </Switch>
           </div>
         </div>

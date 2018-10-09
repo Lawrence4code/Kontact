@@ -23,7 +23,7 @@ class AddContact extends Component {
   onFormSubmit = (e, dispatch) => {
     // console.log('onFormSubmit triggered.');
     e.preventDefault();
-    const { name, email, phone, errors } = this.state;
+    const { name, email, phone } = this.state;
     const newContact = {
       id: uuid(),
       name,
@@ -78,6 +78,9 @@ class AddContact extends Component {
       // errors: {}
 
     })
+
+    this.props.history.push('/');
+
   }
 
   render() {
