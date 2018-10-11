@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import logo from '../../images/book.svg';
+
 const Header = props => {
   const { branding } = props;
   return (
     <div className="navigation">
       <div className="navigation__logo">
+        <img src={logo} className="site-logo" alt="logo" />
         <h1> {branding} </h1>
       </div>
       <div className="navigation__menu">

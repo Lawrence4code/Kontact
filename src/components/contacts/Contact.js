@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Consumer } from '../../context';
-import { fire } from '../../fire';
+import database from '../../fire';
 
-const database = fire.database();
+import cross from '../../images/cross.svg';
+import expand from '../../images/unfold_more.svg';
+
+import '../../images/sprites.svg';
 
 class Contact extends Component {
   state = {
@@ -24,7 +27,8 @@ class Contact extends Component {
   };
 
   render() {
-    const { id, name, email, phone } = this.props;
+    const { id, firstName, lastName, email, phone } = this.props;
+    // console.log(id, firstName, lastName, email, phone);
 
     return (
       <Consumer>
@@ -32,17 +36,20 @@ class Contact extends Component {
           const { dispatch } = value;
           return (
             <div className="contactList__items">
-              <h3>{name}</h3>
+              <h3>
+                {firstName} {lastName}
+              </h3>
               <div>
-                <i
+                <img
+                  src={expand}
+                  className="icon--expand"
+                  alt="cross-icon"
                   onClick={this.onShowClick}
-                  className="fa fa-sort-desc"
-                  aria-hidden="true"
                 />
-
-                <i
-                  className="fa fa-times"
-                  aria-hidden="true"
+                <img
+                  src={cross}
+                  className="icon--cross"
+                  alt="cross-icon"
                   onClick={() => {
                     this.onDeleteClick(id, dispatch);
                   }}
@@ -63,7 +70,8 @@ class Contact extends Component {
 }
 
 Contact.propTypes = {
-  name: PropTypes.string.isRequired,
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired
 };

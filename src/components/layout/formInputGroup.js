@@ -8,8 +8,7 @@ const FormInputGroup = ({
   placeholder,
   value,
   onChange,
-  error,
-  className
+  error
 }) => {
   return (
     <div className="fromInputGroup">
@@ -21,7 +20,7 @@ const FormInputGroup = ({
         value={value}
         onChange={onChange}
       />
-      {error}
+      <h6 className="fromInputGroup__errorMessage"> {error} </h6>
     </div>
   );
 };

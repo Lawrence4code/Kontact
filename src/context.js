@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { fire } from './fire';
+import database from './fire';
 const Context = React.createContext();
-
-const database = fire.database();
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -54,7 +52,6 @@ export class Provider extends Component {
       for (const id in data) {
         const contacts = data[id];
         contactRecordsFromFirebase.push({ ...contacts, id });
-
         this.setState({
           contacts: contactRecordsFromFirebase
         });

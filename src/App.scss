@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #6654bb;
+  background-color: #392c7c;
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -86,14 +86,14 @@ body {
   display: grid;
   align-items: center;
   background-color: white;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 
   & h3 {
     text-align: left;
     display: inline;
     color: #666;
     padding: 0 50px;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
   }
 
   & div {
@@ -106,20 +106,12 @@ body {
   }
 }
 
-.fa-times {
-  display: inline-block;
-  color: red;
-  width: 30px;
-  height: 30px;
-  margin-top: 10px;
+.icon--cross {
+  cursor: pointer;
 }
 
-.fa-sort-desc {
-  margin-left: 10px;
-  color: blue;
-  width: 30px;
-  height: 30px;
-  margin-top: 8px;
+.site-logo {
+  margin-right: 7.5px;
 }
 
 // add Contact
@@ -166,6 +158,11 @@ body {
     display: inline-block;
     font-size: 1.1rem;
   }
+
+  &__errorMessage {
+    color: red;
+    margin: -10px 0 0 1.5rem;
+  }
 }
 
 .about {
@@ -185,4 +182,13 @@ body {
       font-size: 1.5rem;
     }
   }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
 }
