@@ -1,0 +1,188 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #6654bb;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Navigation
+
+// Blue 3eb4ec
+// Dark Blue 6654bb;
+
+.navigation {
+  background: #3eb4ec;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+
+  &__logo {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+
+    & h1 {
+      margin: 0;
+    }
+  }
+
+  &__menu {
+    justify-self: end;
+    margin-right: 15px;
+
+    & ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      & li {
+        list-style-type: none;
+        width: auto;
+      }
+    }
+  }
+  &__items {
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+.contactList {
+  width: 80%;
+  margin: 0 auto;
+
+  margin-top: 10px;
+  border-radius: 2px;
+
+  &__title {
+    font-size: 2.25rem;
+    color: white;
+  }
+
+  &__contactInfo {
+    display: block;
+    list-style-type: none;
+    text-align: center;
+    color: #666;
+    grid-column: 2 / 4;
+  }
+}
+
+.contactList__items {
+  width: 45%;
+  margin: 10px auto;
+  border-radius: 2px;
+  display: grid;
+  align-items: center;
+  background-color: white;
+  grid-template-columns: repeat(4, 1fr);
+
+  & h3 {
+    text-align: left;
+    display: inline;
+    color: #666;
+    padding: 0 50px;
+    grid-column: 1 / 4;
+  }
+
+  & div {
+    display: flex;
+    justify-content: space-around;
+
+    & i {
+      align-items: center;
+    }
+  }
+}
+
+.fa-times {
+  display: inline-block;
+  color: red;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.fa-sort-desc {
+  margin-left: 10px;
+  color: blue;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+}
+
+// add Contact
+
+.addContact {
+  background: white;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 10px 20px 25px 20px;
+
+  &__title {
+    font-size: 2.25rem;
+    color: white;
+  }
+
+  & h3 {
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 3px;
+    font-size: 1.75rem;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    background-color: #6654bb;
+    margin-top: 25px;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    color: white;
+  }
+}
+
+.fromInputGroup {
+  & label {
+    font-size: 1.2rem;
+  }
+  & input {
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid grey;
+    display: inline-block;
+    font-size: 1.1rem;
+  }
+}
+
+.about {
+  &__title {
+    font-size: 2.25rem;
+    color: white;
+  }
+
+  &__body {
+    background: white;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 10px 20px 25px 20px;
+
+    & p:first-child {
+      font-size: 1.5rem;
+    }
+  }
+}

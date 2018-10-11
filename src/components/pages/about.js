@@ -2,12 +2,22 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div>
-      <h1> About Us </h1>
-      <p> Simple App for string the important contacts </p>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique accusantium illum ipsam, sapiente facere cumque blanditiis doloribus quod esse, atque fuga expedita aut! Cum ducimus dolore atque quas iusto. </p>
+    <div className="about">
+      <h1 className="about__title"> About Us </h1>
+      <div className="about__body">
+        <p> Simple App for storing the important contacts </p>
+        <p>
+          This is the simple app where you can store you contacts and manage
+          them.
+        </p>
+        <p>
+          Upcoming version with have filter contacts with Last name and expand
+          all contact information and other helpful feature for managing your
+          contacts.
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default AboutUs;
